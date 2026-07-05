@@ -22,7 +22,7 @@ Purpose:
 PROJECT_NAME = "IPL Analytics & Strategy Platform"
 PROJECT_VERSION = "1.0.0"
 
-AUTHOR = "Akshay Abhiraj"
+AUTHOR = ""
 
 
 # ===========================================================
