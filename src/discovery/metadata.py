@@ -12,7 +12,6 @@ Purpose:
     - Convert MatchMetadata objects into a DataFrame.
     - Return a consolidated metadata table.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

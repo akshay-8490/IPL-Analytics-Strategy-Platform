@@ -17,7 +17,6 @@ Used By:
     - deliveries.py
     - Future ETL pipelines
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

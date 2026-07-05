@@ -12,7 +12,6 @@ Purpose:
     - Provide strongly-typed objects for ETL.
     - Avoid passing raw dictionaries throughout the pipeline.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

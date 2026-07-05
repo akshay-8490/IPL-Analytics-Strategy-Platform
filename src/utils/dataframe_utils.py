@@ -13,7 +13,6 @@ Purpose:
     - Optimize DataFrame memory usage.
     - Generate simple DataFrame summaries.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

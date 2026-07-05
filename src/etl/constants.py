@@ -21,7 +21,6 @@ Used By:
     - feature_builder.py
     - match_info.py
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

@@ -15,7 +15,6 @@ Purpose:
     - Build target features
     - Provide reusable feature engineering pipeline
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

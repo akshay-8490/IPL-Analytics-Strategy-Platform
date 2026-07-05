@@ -11,7 +11,6 @@ Purpose:
     - Parse match metadata.
     - Convert raw CSV records into MatchMetadata objects.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

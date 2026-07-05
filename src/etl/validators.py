@@ -15,7 +15,6 @@ Purpose:
     - Validate winning margins
     - Perform dataframe-level validation
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

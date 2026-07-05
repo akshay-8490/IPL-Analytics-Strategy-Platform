@@ -15,7 +15,6 @@ Purpose:
     - Standardize season values
     - Provide reusable dataframe-level standardization
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

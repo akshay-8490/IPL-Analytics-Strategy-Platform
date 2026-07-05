@@ -11,7 +11,6 @@ Purpose:
     - Convert validation results into a tabular report.
     - Provide an executive summary of dataset quality.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

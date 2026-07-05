@@ -13,7 +13,6 @@ Purpose:
     - Automatically create output directories.
     - Provide consistent logging.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

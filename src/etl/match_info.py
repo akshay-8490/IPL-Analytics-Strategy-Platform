@@ -13,7 +13,6 @@ Purpose:
     - Produce warehouse-ready match metadata
     - Serve as the public ETL interface
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

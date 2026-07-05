@@ -15,7 +15,6 @@ Purpose:
     - Normalize numeric columns
     - Provide reusable dataframe-level normalization
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

@@ -14,7 +14,6 @@ Purpose:
     - Classify CSV files.
     - Pair info and delivery files.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

@@ -12,7 +12,6 @@ Purpose:
     - Generate dataset quality statistics.
     - Produce a reusable validation report.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

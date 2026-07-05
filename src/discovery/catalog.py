@@ -13,7 +13,6 @@ Purpose:
     - Build a catalog DataFrame.
     - Add validation flags.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 

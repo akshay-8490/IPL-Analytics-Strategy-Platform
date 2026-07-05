@@ -12,7 +12,6 @@ Purpose:
     - Provide reusable loggers.
     - Standardize log formatting across modules.
 
-Author: Akshay Abhiraj
 ===========================================================
 """
 
