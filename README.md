@@ -3,7 +3,6 @@
 [![Python Version](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![Database](https://img.shields.io/badge/Database-MySQL%208.0-orange.svg)](https://www.mysql.com/)
 [![BI Tool](https://img.shields.io/badge/BI-Power%20BI-yellow.svg)](https://powerbi.microsoft.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![ML Engine](https://img.shields.io/badge/ML%20Engine-CatBoost%20%7C%20XGBoost%20%7C%20LightGBM-purple.svg)](https://catboost.ai/)
 
 An end-to-end Data Engineering, Data Science, and Business Intelligence platform built to analyze historical Indian Premier League (IPL) data (from 2008 to 2026). The platform ingests raw ball-by-ball datasets, standardizes and processes them into a normalized MySQL Data Warehouse (Star Schema), generates analytical marts (Gold Layer), trains multi-class machine learning models to predict match outcomes, and serves an executive Power BI Strategy Dashboard.
@@ -19,7 +18,6 @@ An end-to-end Data Engineering, Data Science, and Business Intelligence platform
 6. [Power BI Strategy & Analytics Dashboard](#-power-bi-strategy--analytics-dashboard)
 7. [Developer Setup & Quickstart](#-developer-setup--quickstart)
 8. [Pipeline Workflows & Execution](#-pipeline-workflows--execution)
-9. [Project Contributors & License](#-project-contributors--license)
 
 ---
 
@@ -378,10 +376,3 @@ If you prefer running through the notebooks interactively:
 7. Run `07_machine_learning.ipynb` to train predictive classifiers.
 8. Run `08_export_validation.ipynb` to package the conformed dashboard datasets.
 
----
-
-## 📜 Project Contributors & License
-
-- **Author**: Akshay Abhiraj
-- **Development Date**: July 2026
-- **License**: Distributed under the MIT License. See [LICENSE](LICENSE) for details.
