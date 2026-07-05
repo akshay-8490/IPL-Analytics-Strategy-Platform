@@ -1,0 +1,25 @@
+# Enforce LF endings on all code, config and markdown files
+* text=auto eol=lf
+
+# Force LF specifically
+*.py text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.sql text eol=lf
+*.csv text eol=lf
+
+# Force binary classification for serialized/compiled files
+*.pbix binary
+*.parquet binary
+*.pkl binary
+*.joblib binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
