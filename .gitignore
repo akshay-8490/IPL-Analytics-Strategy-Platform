@@ -1,0 +1,69 @@
+# ==========================================
+# IPL Analytics & Strategy Platform Git Ignore
+# ==========================================
+
+# Python Caches & Build Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.ruff_cache/
+*.egg
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+ENV_DIR/
+
+# Jupyter Notebook Checkpoints & Outputs
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Machine Learning Outputs & Info Directories
+catboost_info/
+
+# Local Environment Credentials
+.env
+.env.local
+
+# IDE Settings
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+
+# System & OS Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Data Directory Rules
+# Ignore raw Cricsheet source files
+data/raw/ipl_csv2/
+
+# Ignore intermediate processed data
+data/processed/staging/
+data/processed/warehouse/
+
+# Ignore output analytics data mart (gold layer)
+data/analytics/
+
+# Ignore local visualization reports & run releases
+reports/visualizations/
+release/
+
+# Track Power BI assets explicitly (override if matches above)
+!powerbi/
+!powerbi/pbix/
+!powerbi/pbix/IPL-Strategy & Analytics.pbix
+!powerbi/datasets/
+!powerbi/datasets/executive_match_dataset.csv
+!powerbi/datasets/executive_match_dataset.parquet
