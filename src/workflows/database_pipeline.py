@@ -260,11 +260,29 @@ def run_database_pipeline(
             facts=facts,
         )
 
-        logger.info("Saving conformed dimensions and facts to warehouse directory.")
+        logger.info("Saving conformed dimensions and facts to warehouse directory (Parquet & CSV).")
         for name, df in dimensions.items():
+            if name == "dim_team":
+                import json
+                from config.config import PROJECT_ROOT
+                metadata_path = PROJECT_ROOT / "config" / "team_metadata.json"
+                with open(metadata_path, "r", encoding="utf-8") as f:
+                    meta_dict = json.load(f)
+                meta_df = pd.DataFrame.from_dict(meta_dict, orient="index").reset_index()
+                meta_df.rename(columns={"index": "team_name"}, inplace=True)
+                df = df.merge(meta_df, on="team_name", how="left")
+                df.rename(columns={"team_short_name": "short_name"}, inplace=True)
+                cols = [
+                    "team_key", "team_name", "short_name", "home_city", 
+                    "home_ground", "founded_year", "first_season", 
+                    "last_season", "logo_url"
+                ]
+                df = df[cols]
             df.to_parquet(DIMENSIONS_DIR / f"{name}.parquet", index=False)
+            df.to_csv(DIMENSIONS_DIR / f"{name}.csv", index=False)
         for name, df in facts.items():
             df.to_parquet(FACTS_DIR / f"{name}.parquet", index=False)
+            df.to_csv(FACTS_DIR / f"{name}.csv", index=False)
 
         execution_time = time.perf_counter() - start_time
         from config.settings import MYSQL_DATABASE

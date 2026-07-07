@@ -19,7 +19,6 @@ from config.config import (
     DIMENSIONS_DIR,
     FACTS_DIR,
     MODELS_DIR,
-    REPORTS_DIR,
     STAGING_DIR,
     WAREHOUSE_DIR,
 )
@@ -78,6 +77,7 @@ def _validate_warehouse() -> dict[str, Any]:
     Validate warehouse dimensions and facts flat files.
     """
     expected_files = [
+        # Parquets
         DIMENSIONS_DIR / "dim_match.parquet",
         DIMENSIONS_DIR / "dim_team.parquet",
         DIMENSIONS_DIR / "dim_player.parquet",
@@ -86,6 +86,16 @@ def _validate_warehouse() -> dict[str, Any]:
         FACTS_DIR / "fact_match.parquet",
         FACTS_DIR / "fact_player_match.parquet",
         FACTS_DIR / "fact_delivery.parquet",
+        
+        # CSVs
+        DIMENSIONS_DIR / "dim_match.csv",
+        DIMENSIONS_DIR / "dim_team.csv",
+        DIMENSIONS_DIR / "dim_player.csv",
+        DIMENSIONS_DIR / "dim_venue.csv",
+        DIMENSIONS_DIR / "dim_season.csv",
+        FACTS_DIR / "fact_match.csv",
+        FACTS_DIR / "fact_player_match.csv",
+        FACTS_DIR / "fact_delivery.csv",
     ]
 
     passed = 0
@@ -103,7 +113,10 @@ def _validate_warehouse() -> dict[str, Any]:
 
         # Check 2 & 3: Readability & non-empty
         try:
-            df = pd.read_parquet(file_path)
+            if file_path.suffix == ".parquet":
+                df = pd.read_parquet(file_path)
+            else:
+                df = pd.read_csv(file_path)
             if df.empty:
                 failed += 1
                 missing.append(f"{name} (empty)")
@@ -137,7 +150,7 @@ def _validate_analytics() -> dict[str, Any]:
     ]
 
     expected_files = {
-        "executive": ["executive_summary.json"],
+        "executive": ["executive_summary.json", "season_summary.csv"],
         "season": ["margins.parquet", "matches.parquet", "outcomes.parquet", "player_of_match.parquet", "teams.parquet", "toss.parquet", "venues.parquet"],
         "team": ["margins.parquet", "participation.parquet", "season.parquet", "toss.parquet", "venue.parquet", "wins.parquet"],
         "venue": ["margins.parquet", "matches.parquet", "season.parquet", "teams.parquet", "toss.parquet"],
@@ -186,6 +199,13 @@ def _validate_analytics() -> dict[str, Any]:
                     if not data:
                         failed += 1
                         missing.append(f"{full_name} (empty json)")
+                    else:
+                        passed += 2
+                elif file_path.suffix == ".csv":
+                    df = pd.read_csv(file_path)
+                    if df.empty:
+                        failed += 1
+                        missing.append(f"{full_name} (empty csv)")
                     else:
                         passed += 2
                 else:
@@ -267,7 +287,6 @@ def _validate_exports() -> dict[str, Any]:
     Validate packaging release output directories.
     """
     expected_dirs = [
-        REPORTS_DIR,
         ANALYTICS_DATA_DIR,
         WAREHOUSE_DIR,
         MODELS_DIR,

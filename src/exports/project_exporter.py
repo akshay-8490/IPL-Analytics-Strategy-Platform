@@ -19,7 +19,6 @@ from typing import Any
 from config.config import (
     ANALYTICS_DATA_DIR,
     MODELS_DIR,
-    REPORTS_DIR,
     RELEASE_DIR,
     WAREHOUSE_DIR,
 )
@@ -38,7 +37,6 @@ RELEASE_STRUCTURE = {
     "warehouse": "warehouse",
     "analytics": "analytics",
     "machine_learning": "machine_learning",
-    "reports": "reports",
     "validation": "validation",
 }
 
@@ -191,10 +189,6 @@ def export_project(
         release_dirs["machine_learning"],
     )
 
-    files_exported += _copy_directory(
-        REPORTS_DIR,
-        release_dirs["reports"],
-    )
 
     _export_project_metadata(
         release_dirs["metadata"],

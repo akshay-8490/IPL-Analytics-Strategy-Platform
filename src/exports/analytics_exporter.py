@@ -178,6 +178,9 @@ def export_analytics_results(
             output_path=EXECUTIVE_DIR / "executive_summary.json",
         )
 
+        # Export new season summary (CSV only)
+        _export_season_summary()
+
         # Export analytical artifacts
         for (
             domain,
@@ -195,3 +198,72 @@ def export_analytics_results(
     except Exception:
         logger.exception("Failed to export analytics results.")
         raise
+
+
+def _export_season_summary() -> None:
+    """
+    Build and export the season_summary.csv dataset (CSV only).
+    """
+    logger.info("Building season_summary dataset.")
+    from src.database.connection import create_connection, close_connection
+    from config.config import PROJECT_ROOT
+
+    conn = create_connection()
+    try:
+        query = """
+        SELECT 
+            s.season,
+            m.match_id AS final_match_id,
+            m.match_date AS final_date,
+            v.venue AS final_venue,
+            v.city AS final_city,
+            m.player_of_match AS player_of_match_final,
+            m.win_margin,
+            m.win_type,
+            t1.team_name AS team1,
+            t2.team_name AS team2,
+            w.team_name AS champion,
+            m.team1_key,
+            m.team2_key,
+            m.winner_key
+        FROM dim_match m
+        INNER JOIN dim_season s ON m.season_key = s.season_key
+        INNER JOIN dim_venue v ON m.venue_key = v.venue_key
+        INNER JOIN dim_team t1 ON m.team1_key = t1.team_key
+        INNER JOIN dim_team t2 ON m.team2_key = t2.team_key
+        INNER JOIN dim_team w ON m.winner_key = w.team_key
+        WHERE m.match_date = (
+            SELECT MAX(match_date) 
+            FROM dim_match 
+            WHERE season_key = m.season_key
+        )
+        ORDER BY s.season
+        """
+        df = pd.read_sql(query, conn)
+        
+        # Derive runner_up
+        df["runner_up"] = df.apply(
+            lambda row: row["team2"] if row["winner_key"] == row["team1_key"] else row["team1"],
+            axis=1
+        )
+        
+        # Derive winning_margin
+        df["winning_margin"] = df.apply(
+            lambda row: f"{row['win_margin']} {row['win_type']}" if pd.notnull(row['win_margin']) and row['win_type'] else "",
+            axis=1
+        )
+        
+        # Reorder and format columns
+        cols = [
+            "season", "champion", "runner_up", "final_match_id", 
+            "final_date", "final_venue", "final_city", 
+            "player_of_match_final", "winning_margin"
+        ]
+        
+        output_dir = EXECUTIVE_DIR
+        output_dir.mkdir(parents=True, exist_ok=True)
+        df[cols].to_csv(output_dir / "season_summary.csv", index=False)
+        logger.info("Successfully exported season_summary.csv to %s", output_dir)
+        
+    finally:
+        close_connection(conn)
