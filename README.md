@@ -98,12 +98,6 @@ IPL-Analytics-Strategy-Platform/
 │   │   └── warehouse/       # Relational dimensions and facts (Parquet format)
 │   └── analytics/           # Analytics mart datasets (CSVs and Parquet files)
 │
-├── models/                  # Pinned ML benchmarks and evaluation reports
-│   ├── benchmark_results.csv
-│   ├── classification_report.json
-│   ├── confusion_matrix.csv
-│   └── feature_importance.csv
-│
 ├── notebooks/               # Step-by-step Jupyter Notebooks (01 to 08)
 │   ├── 01_dataset_discovery.ipynb
 │   ├── 02_data_preprocessing.ipynb
