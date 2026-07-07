@@ -1,0 +1,121 @@
+{
+    "Chennai Super Kings": {
+        "home_city": "Chennai",
+        "home_ground": "M.A. Chidambaram Stadium, Chennai",
+        "founded_year": 2008,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/CSK/logos/Logooutline/CSKoutline.png"
+    },
+    "Delhi Capitals": {
+        "home_city": "New Delhi",
+        "home_ground": "Arun Jaitley Stadium, New Delhi",
+        "founded_year": 2008,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/DC/Logos/LogoOutline/DCoutline.png"
+    },
+    "Delhi Daredevils": {
+        "home_city": "New Delhi",
+        "home_ground": "Arun Jaitley Stadium, New Delhi",
+        "founded_year": 2008,
+        "franchise_status": "defunct",
+        "logo_url": "https://documents.iplt20.com/ipl/DC/Logos/LogoOutline/DCoutline.png"
+    },
+    "Gujarat Titans": {
+        "home_city": "Ahmedabad",
+        "home_ground": "Narendra Modi Stadium, Ahmedabad",
+        "founded_year": 2022,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/GT/Logos/Logooutline/GToutline.png"
+    },
+    "Kolkata Knight Riders": {
+        "home_city": "Kolkata",
+        "home_ground": "Eden Gardens, Kolkata",
+        "founded_year": 2008,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/KKR/Logos/Logooutline/KKRoutline.png"
+    },
+    "Lucknow Super Giants": {
+        "home_city": "Lucknow",
+        "home_ground": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+        "founded_year": 2022,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/LSG/Logos/Logooutline/LSGoutline.png"
+    },
+    "Mumbai Indians": {
+        "home_city": "Mumbai",
+        "home_ground": "Wankhede Stadium, Mumbai",
+        "founded_year": 2008,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/MI/Logos/Logooutline/Mloutline.png"
+    },
+    "Punjab Kings": {
+        "home_city": "New Chandigarh",
+        "home_ground": "Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh (Mullanpur)",
+        "founded_year": 2008,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/PBKS/Logos/Logooutline/PBKSoutline.png"
+    },
+    "Kings XI Punjab": {
+        "home_city": "Mohali",
+        "home_ground": "Punjab Cricket Association (IS Bindra) Stadium, Mohali",
+        "founded_year": 2008,
+        "franchise_status": "defunct",
+        "logo_url": "https://documents.iplt20.com/ipl/PBKS/Logos/Logooutline/PBKSoutline.png"
+    },
+    "Rajasthan Royals": {
+        "home_city": "Jaipur",
+        "home_ground": "Sawai Mansingh Stadium, Jaipur",
+        "founded_year": 2008,
+        "franchise_status": "active",
+        "logo_url": "https://1000logos.net/wp-content/uploads/2024/03/Rajasthan-Royals-Logo-768x432.png"
+    },
+    "Royal Challengers Bengaluru": {
+        "home_city": "Bengaluru",
+        "home_ground": "M. Chinnaswamy Stadium, Bengaluru",
+        "founded_year": 2008,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/RCB/Logos/Logooutline/RCBoutline.png"
+    },
+    "Sunrisers Hyderabad": {
+        "home_city": "Hyderabad",
+        "home_ground": "Rajiv Gandhi International Cricket Stadium, Hyderabad",
+        "founded_year": 2013,
+        "franchise_status": "active",
+        "logo_url": "https://documents.iplt20.com/ipl/SRH/Logos/Logooutline/SRHoutline.png"
+    },
+    "Deccan Chargers": {
+        "home_city": "Hyderabad",
+        "home_ground": "Rajiv Gandhi International Cricket Stadium, Hyderabad",
+        "founded_year": 2008,
+        "franchise_status": "defunct",
+        "logo_url": "https://ipl-stats-sports-mechanic.s3.ap-south-1.amazonaws.com/ipl/teamlogos/DEC.png?v=2"
+    },
+    "Kochi Tuskers Kerala": {
+        "home_city": "Kochi",
+        "home_ground": "Jawaharlal Nehru International Stadium, Kaloor, Kochi",
+        "founded_year": 2011,
+        "franchise_status": "defunct",
+        "logo_url": "https://ipl-stats-sports-mechanic.s3.ap-south-1.amazonaws.com/ipl/teamlogos/KTK.png?v=2"
+    },
+    "Pune Warriors": {
+        "home_city": "Pune",
+        "home_ground": "Maharashtra Cricket Association Stadium, Gahunje, Pune",
+        "founded_year": 2011,
+        "franchise_status": "defunct",
+        "logo_url": "https://ipl-stats-sports-mechanic.s3.ap-south-1.amazonaws.com/ipl/teamlogos/PWI.png?v=2"
+    },
+    "Rising Pune Supergiant": {
+        "home_city": "Pune",
+        "home_ground": "Maharashtra Cricket Association Stadium, Gahunje, Pune",
+        "founded_year": 2016,
+        "franchise_status": "defunct",
+        "logo_url": "https://ipl-stats-sports-mechanic.s3.ap-south-1.amazonaws.com/ipl/teamlogos/RPS.png?v=2"
+    },
+    "Gujarat Lions": {
+        "home_city": "Rajkot",
+        "home_ground": "Saurashtra Cricket Association Stadium, Khandheri, Rajkot",
+        "founded_year": 2016,
+        "franchise_status": "defunct",
+        "logo_url": "https://ipl-stats-sports-mechanic.s3.ap-south-1.amazonaws.com/ipl/teamlogos/GL.png?v=2"
+    }
+}

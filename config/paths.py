@@ -34,10 +34,9 @@ DATA_DIR = PROJECT_ROOT / "data"
 NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 SRC_DIR = PROJECT_ROOT / "src"
 
-MODELS_DIR = PROJECT_ROOT / "models"
-REPORTS_DIR = PROJECT_ROOT / "reports"
-POWERBI_DIR = PROJECT_ROOT / "powerbi"
 RELEASE_DIR = PROJECT_ROOT / "release"
+MODELS_DIR = RELEASE_DIR / "models"
+POWERBI_DIR = PROJECT_ROOT / "powerbi"
 
 
 # ===========================================================
@@ -71,11 +70,6 @@ FACTS_DIR = WAREHOUSE_DIR / "facts"
 ANALYTICS_DATA_DIR = DATA_DIR / "analytics"
 
 
-# ===========================================================
-# Reports
-# ===========================================================
-
-VISUALIZATIONS_DIR = REPORTS_DIR / "visualizations"
 
 
 # ===========================================================
@@ -97,15 +91,11 @@ REQUIRED_DIRECTORIES = [
     DIMENSIONS_DIR,
     FACTS_DIR,
 
-
     # Gold Layer
     ANALYTICS_DATA_DIR,
 
     # Models
     MODELS_DIR,
-
-    # Reports
-    VISUALIZATIONS_DIR,
 
     # Power BI
     POWERBI_DATASET_DIR,
@@ -133,7 +123,6 @@ __all__ = [
     "NOTEBOOKS_DIR",
     "SRC_DIR",
     "MODELS_DIR",
-    "REPORTS_DIR",
     "POWERBI_DIR",
     "RELEASE_DIR",
 
@@ -146,9 +135,6 @@ __all__ = [
     "DIMENSIONS_DIR",
     "FACTS_DIR",
     "ANALYTICS_DATA_DIR",
-
-    # Reports
-    "VISUALIZATIONS_DIR",
 
     # Power BI
     "POWERBI_DATASET_DIR",
